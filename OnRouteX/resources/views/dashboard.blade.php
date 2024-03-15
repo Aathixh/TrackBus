@@ -9,7 +9,20 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
+                    <form method="POST" action="{{ route('bus.search') }}">
+                        @csrf
+                        <div>
+                            <label for="from_address">From:</label>
+                            <input type="text" id="from_address" name="from_address" required>
+                        </div>
+                        <div>
+                            <label for="to_address">To:</label>
+                            <input type="text" id="to_address" name="to_address" required>
+                        </div>
+                        <div>
+                            <button type="submit">Search</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

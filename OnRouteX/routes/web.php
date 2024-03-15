@@ -1,7 +1,10 @@
 <?php
-
+use App\Http\Controllers\BookingControler;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LocationController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +31,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
+
+
+Route::post('/bus/search', [BookingControler::class, 'search'])->name('bus.search');
+Route::get('/location/{id}', [LocationController::class, 'locate'])->name('location.show');
