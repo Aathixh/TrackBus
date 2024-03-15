@@ -36,3 +36,4 @@ require __DIR__ . '/auth.php';
 
 Route::post('/bus/search', [BookingControler::class, 'search'])->name('bus.search');
 Route::get('/location/{id}', [LocationController::class, 'locate'])->name('location.show');
+Route::get('/local', [LocationController::class, 'local'])->name('local.show');

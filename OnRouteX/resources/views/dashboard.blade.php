@@ -25,6 +25,13 @@
                     </form>
                 </div>
             </div>
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                    <div>
+                            <a href="{{ route('local.show') }}" class="btn btn-primary">Go to local bus page</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </x-app-layout>
