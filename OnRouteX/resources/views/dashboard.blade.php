@@ -63,4 +63,5 @@
     domain="www.chatbase.co"
     defer>
 </script>
+@include('layouts.footer')
 </x-app-layout>

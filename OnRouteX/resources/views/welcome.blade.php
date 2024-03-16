@@ -38,10 +38,11 @@
                     <a href="{{route('guest')}}" class="btn btn-primary"><button>Explore</button></a>
                 </div>
             </div>
-            
+
 
         </div>
 
         
     </body>
 </html>
+@include('layouts.footer')

@@ -29,4 +29,5 @@
 </div>
 
 <script src="{{ asset('js/localbusmap.js') }}"></script>
+@include('layouts.footer')
 </x-app-layout>
