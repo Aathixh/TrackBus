@@ -34,8 +34,11 @@
             
             <div id = 'onroutex'>
             {{'OnRouteX'}}
-            <div><a href="{{route('guest')}}" class="btn btn-primary"><button>Explore</button></a></div>
+                <div>
+                    <a href="{{route('guest')}}" class="btn btn-primary"><button>Explore</button></a>
+                </div>
             </div>
+            
 
         </div>
 

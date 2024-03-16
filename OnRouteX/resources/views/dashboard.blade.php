@@ -6,6 +6,12 @@
     </x-slot>
     <head>
         <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+        <script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "r6HpTSonoPPpdKLL1YXrj",
+    domain: "www.chatbase.co"
+    }
+    </script>
     </head>
     
 </head>
@@ -50,4 +56,11 @@
             </div>
         </div>
     </div>
+
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="r6HpTSonoPPpdKLL1YXrj"
+    domain="www.chatbase.co"
+    defer>
+</script>
 </x-app-layout>
