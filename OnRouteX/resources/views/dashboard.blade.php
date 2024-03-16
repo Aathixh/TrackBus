@@ -14,6 +14,7 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <form method="POST" action="{{ route('bus.search') }}">
+                        <div id ='heading'>{{'Book Your Bus Ticket'}}</div>
                         @csrf
                         <div class="form-control">
                             <input type="text" id="from_address" name="from_address" required>
