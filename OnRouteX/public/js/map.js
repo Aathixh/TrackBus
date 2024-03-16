@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var mapOptions = {
         center: [latitude, longitude],
-        zoom: 10
+        zoom: 16
     };
 
     // Creating a map object
@@ -24,4 +24,28 @@ document.addEventListener('DOMContentLoaded', function() {
     marker.addTo(map);
     console.log('Latitude:', latitude);
     console.log('Longitude:', longitude);
+    marker.bindPopup("Here Is Your Bus").openPopup();
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById('alertButton').addEventListener('click', function() {
+        var input = prompt("Please enter your alert message and the queries to send to the admin dashboard (comma-separated), separated by a '|':");
+        if (input !== null) {
+            var parts = input.split("|");
+            var alertMessage = parts[0];
+            var selectedQueries = parts[1];
+            if (selectedQueries) {
+                var queries = selectedQueries.split(",");
+                // Send the queries to the admin dashboard
+                sendQueriesToAdminDashboard(queries);
+            }
+            fetch('/send-alert', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({message: alertMessage}),
+            });
+        }
+    });
 });

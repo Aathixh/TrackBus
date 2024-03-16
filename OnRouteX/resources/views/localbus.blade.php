@@ -6,6 +6,7 @@
     </x-slot>
 <html>
     <head>
+        <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
@@ -20,9 +21,10 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
 
-
+                <div id="map" style="height: 500px;" data-latitude="{{ $latitude }}" data-longitude="{{ $longitude }}"></div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="{{ asset('js/localbusmap.js') }}"></script>
 </x-app-layout>

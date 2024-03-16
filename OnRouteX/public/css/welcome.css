@@ -1,0 +1,14 @@
+#onroutex{
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    font-size: 70px;
+    color: #ffffff;
+    font-family: 'Arial';
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-top: -20px; /* Adjust the value as needed */
+}

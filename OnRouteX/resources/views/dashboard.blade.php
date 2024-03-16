@@ -4,20 +4,34 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-
+    <head>
+        <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+    </head>
+    
+</head>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <form method="POST" action="{{ route('bus.search') }}">
                         @csrf
-                        <div>
-                            <label for="from_address">From:</label>
+                        <div class="form-control">
                             <input type="text" id="from_address" name="from_address" required>
+                            <label for="from_address">
+                                <span style="transition-delay:0ms">F</span>
+                                <span style="transition-delay:50ms">R</span>
+                                <span style="transition-delay:100ms">O</span>
+                                <span style="transition-delay:150ms">M</span>
+                                <span style="transition-delay:200ms">:</span>
+                            </label>
                         </div>
-                        <div>
-                            <label for="to_address">To:</label>
+                        <div class="form-control">
                             <input type="text" id="to_address" name="to_address" required>
+                            <label for="to_address">
+                                <span style="transition-delay:0ms">T</span>
+                                <span style="transition-delay:50ms">O</span>
+                                <span style="transition-delay:100ms">:</span>
+                            </label>
                         </div>
                         <div>
                             <button type="submit">Search</button>
@@ -25,10 +39,11 @@
                     </form>
                 </div>
             </div>
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div id = 'localpage' class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div>
-                            <a href="{{ route('local.show') }}" class="btn btn-primary">Go to local bus page</a>
+                        <a href="{{ route('local.show') }}" class="btn btn-primary"><button>Go to local bus page</button>
+                        </a>
                     </div>
                 </div>
             </div>
